@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Andrés Santiago Arias is a Full Stack Developer building product-ready software from idea to production."
+    />
+    <meta
+      property="og:title"
+      content="Andrés Santiago Arias — Full Stack Developer"
+    />
+    <meta
+      property="og:description"
+      content="Product work, technical decisions and evidence from production-minded software."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/assets/hero-engineering.webp" />
+    <link rel="canonical" href="/" />
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Andrés Santiago Arias — Full Stack Developer</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Andrés Santiago Arias home"
+        ><span class="brand-mark">AS</span
+        ><span>Andrés<span class="accent">/</span>Arias</span></a
+      >
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        Menu <span>+</span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a class="is-active" href="#work">Work</a><a href="#profile">Profile</a
+        ><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </nav>
+      <a
+        class="header-link"
+        href="https://github.com/AndresArias28"
+        target="_blank"
+        rel="noopener noreferrer"
+        >GitHub ↗</a
+      >
+    </header>
+
+    <main id="main-content">
+      <section class="hero section-shell">
+        <div class="hero-art" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow">
+            <span></span> FULL STACK DEVELOPER · PRODUCT DELIVERY
+          </p>
+          <h1>
+            I build software that <em>survives</em> contact with production.
+          </h1>
+          <p class="lede">
+            My name in <span class="name-highlight">Andrés Santiago Arias Naranjo</span>. I establish the connection between frontend, backend, data, testing, and deployment to turn real operational problems into software that people actually use — from dashboards to custom management systems for businesses that need to bring order to their operations.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#work"
+              >Explore my work <span>↓</span></a
+            ><a
+              class="button secondary"
+              href="https://github.com/AndresArias28"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View GitHub <span>↗</span></a
+            >
+          </div>
+        </div>
+        <aside
+          class="hero-console reveal"
+          aria-label="Engineering profile summary"
+        >
+          <div class="console-top">
+            <span class="status-dot"></span><span>portfolio.system</span
+            ><span class="console-live">ACTIVE</span>
+          </div>
+          <div class="console-body">
+            <p><b>focus</b> = end-to-end product delivery</p>
+            <p><b>layers</b> = frontend + API + data + operations</p>
+            <p><b>approach</b> = evidence over claims</p>
+            <div class="console-tags">
+              <span>React</span><span>Java</span><span>Node.js</span
+              ><span>AWS</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="proof-strip" aria-label="Selected evidence">
+        <div><strong>4</strong><span>projects with a story</span></div>
+        <div><strong>200+</strong><span>invoices / month</span></div>
+        <div><strong>&lt;30s</strong><span>invoice printing</span></div>
+        <div><strong>10+</strong><span>REST endpoints integrated</span></div>
+        <div><strong>MT</strong><span>multi-tenant architecture</span></div>
+      </section>
+
+      <section id="work" class="section-shell section-space">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> SELECTED WORK / 01—04</p>
+            <h2>Products, not just <em>projects.</em></h2>
+          </div>
+          <p>
+            Four examples of product context, engineering decisions and delivery
+            across mobile, web and institutional software.
+          </p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card project-featured reveal">
+            <div class="project-copy">
+              <div class="project-meta">
+                <span>01 / FLAGSHIP PRODUCT</span><i>● Production</i>
+              </div>
+              <h3>Punto Rojo</h3>
+              <p class="">
+                A multi-tenant mobile business management platform that brings
+                customers, sales, invoices, expenses and daily operations into
+                one product.
+              </p>
+              <div class="tag-list">
+                <span>Flutter</span><span>Node.js</span><span>AdonisJS</span
+                ><span>MySQL</span><span>AWS</span>
+              </div>
+              <ul class="evidence-list">
+                <li>200+ invoices per month in production</li>
+                <li>Bluetooth invoice printing in under 30 seconds</li>
+                <li>Tenant-aware API and data boundaries</li>
+              </ul>
+              <a class="text-link" href="work/punto-rojo/"
+                >View case study <span>↗</span></a
+              >
+            </div>
+            <div
+              class="project-visual punto-visual"
+              aria-label="Punto Rojo architecture visualization"
+            >
+              <p>Tenant context</p>
+              <div class="architecture-flow">
+                <span>Flutter app</span><b>→</b><span>REST API</span><b>→</b
+                ><span>AdonisJS</span><b>→</b><span>MySQL</span>
+              </div>
+              <small>AWS / Linux / Nginx</small>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-meta">
+              <span>02 / SAAS PRODUCT</span><i class="muted">● Product build</i>
+            </div>
+            <div class="project-visual legal-visual">
+              <span>LEGAL OPERATIONS</span>
+              <div class="visual-lines"></div>
+            </div>
+            <h3>LegalFlow <span>/ Legatia</span></h3>
+            <p>
+              A legal operations workspace for clients, cases, documents,
+              deadlines and role-aware firm workflows.
+            </p>
+            <div class="tag-list">
+              <span>React</span><span>Vite</span><span>Express</span
+              ><span>MySQL</span>
+            </div>
+            <a class="text-link" href="work/legalflow/"
+              >View case study <span>↗</span></a
+            >
+          </article>
+          <article class="project-card reveal">
+            <div class="project-meta">
+              <span>03 / JAVA + ANGULAR</span><i class="muted">● Completed</i>
+            </div>
+            <div class="project-visual health-visual">
+              <span>HEALTHU</span>
+              <div class="health-ring"><b>JWT</b></div>
+              <small>Angular → Spring Boot → PostgreSQL</small>
+            </div>
+            <h3>HealthU</h3>
+            <p>
+              A full-stack gym management platform for users, routines and
+              challenges with authenticated, validated workflows.
+            </p>
+            <div class="tag-list">
+              <span>Angular</span><span>Java</span><span>Spring Boot</span
+              ><span>PostgreSQL</span>
+            </div>
+            <a class="text-link" href="work/healthu/"
+              >View case study <span>↗</span></a
+            >
+          </article>
+          <article class="project-card reveal">
+            <div class="project-meta">
+              <span>04 / INSTITUTIONAL SYSTEM</span><i class="muted">● 2024</i>
+            </div>
+            <figure class="project-screenshot">
+              <img
+                src="assets/projects/sigeva/dashboard.png"
+                alt="SIGEVA administrative dashboard"
+              />
+              <figcaption>Sanitized institutional interface preview</figcaption>
+            </figure>
+            <h3>SIGEVA</h3>
+            <p>
+              An institutional electoral management system with role-specific
+              workflows for learners, staff and administrators.
+            </p>
+            <div class="tag-list">
+              <span>React 19</span><span>TypeScript</span><span>Vite 7</span
+              ><span>Zod</span>
+            </div>
+            <a class="text-link" href="work/sigeva/"
+              >View case study <span>↗</span></a
+            >
+          </article>
+        </div>
+      </section>
+
+      <section id="profile" class="section-shell section-space profile-section">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> ENGINEERING PROFILE</p>
+            <h2>Capability with <em>context.</em></h2>
+          </div>
+          <p>
+            No percentage bars. Each capability is grounded in the product work
+            it supports.
+          </p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability-card reveal">
+            <span>01</span>
+            <h3>Frontend</h3>
+            <p>
+              Interfaces and mobile flows connected to real product behaviour.
+            </p>
+            <div>
+              React · Angular · Flutter · TypeScript / JavaScript · Bootstrap
+            </div>
+          </article>
+          <article class="capability-card reveal">
+            <span>02</span>
+            <h3>Backend</h3>
+            <p>
+              APIs, authentication and business rules that can be explained in a
+              review.
+            </p>
+            <div>
+              Java / Spring Boot · Node.js · AdonisJS · Express · REST APIs
+            </div>
+          </article>
+          <article class="capability-card reveal">
+            <span>03</span>
+            <h3>Data & quality</h3>
+            <p>
+              Relational models, validation and testing that make delivery
+              safer.
+            </p>
+            <div>
+              MySQL · PostgreSQL · JPA · Sequelize · JUnit · Zod · Postman
+            </div>
+          </article>
+          <article class="capability-card reveal">
+            <span>04</span>
+            <h3>Operations</h3>
+            <p>
+              Enough infrastructure context to understand what happens after
+              merge.
+            </p>
+            <div>
+              AWS · Linux · Docker · Nginx · Git / GitHub · Configuration
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        id="experience"
+        class="section-shell section-space experience-section"
+      >
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow"><span></span> EXPERIENCE SNAPSHOT</p>
+            <h2>Building through the <em>whole system.</em></h2>
+          </div>
+        </div>
+        <div class="timeline reveal">
+          <article>
+            <span class="font-year">2025 — 2026</span>
+            <div>
+              <h3>Backend Developer <em>· Heinsohn</em></h3>
+              <p>
+                Security flows, API integrations, backend automation and
+                collaborative delivery in an Agile engineering team.
+              </p>
+            </div>
+          </article>
+          <article>
+            <span class="font-year">2023 — 2024</span>
+            <div>
+              <h3>Backend Developer <em>· Solemdev</em></h3>
+              <p>
+                REST APIs, relational data, third-party integrations, Angular
+                workflows and Linux-based deployment context.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section-shell contact-section">
+        <div class="contact-card reveal">
+          <p class="eyebrow">
+            <span></span> AVAILABLE FOR PRODUCT-MINDED ENGINEERING ROLES
+          </p>
+          <h2>Have a real problem to solve?</h2>
+          <p>
+            Let’s talk about the product, the technical constraints and the next
+            useful step.
+          </p>
+          <div class="contact-links">
+            <a class="button primary" href="mailto:santo2828@gmail.com"
+              >Start a conversation <span>↗</span></a
+            ><a
+              class="button secondary"
+              href="https://linkedin.com/in/andres-arias-naranjo"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn <span>↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="./"
+        ><span class="brand-mark">AS</span
+        ><span>andres<span class="accent">/</span>arias</span></a
+      >
+      <a href="#main-content">Back to top ↑</a>
+    </footer>
+    <script src="site-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
