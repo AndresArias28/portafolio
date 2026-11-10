@@ -29,7 +29,7 @@
     const meta = `<div class="project-meta"><span>${escapeHtml(project.eyebrow)}</span><i class="${project.status === "Production" ? "" : "muted"}">● ${escapeHtml(project.status)}</i></div>`;
     const tags = `<div class="tag-list">${project.technologies.slice(0, 5).map((tag) => `<span>${escapeHtml(tag)}</span>`).join("")}</div>`;
     if (project.featured) return `<article class="${classes}"><div class="project-copy">${meta}<h3>${escapeHtml(project.name)}</h3><p>${escapeHtml(project.shortDescription)}</p>${tags}<ul class="evidence-list">${project.results.slice(0, 3).map((result) => `<li>${escapeHtml(result[1])}</li>`).join("")}</ul>${renderProjectActions(project)}</div><div class="project-visual punto-visual" aria-label="Punto Rojo architecture preview"><p>Tenant context</p><div class="architecture-flow"><span>Flutter app</span><b>→</b><span>REST API</span><b>→</b><span>AdonisJS</span><b>→</b><span>MySQL</span></div><small>AWS / Linux / Nginx</small></div></article>`;
-    const image = project.image ? `<figure class="project-screenshot"><img src="${assetUrl(project.image)}" alt="${escapeHtml(project.name)} project preview" loading="lazy" decoding="async" /><figcaption>Project interface preview</figcaption></figure>` : "";
+    const image = project.image ? `<figure class="project-screenshot m-zoom"><img src="${assetUrl(project.image)}" alt="${escapeHtml(project.name)} project preview" loading="lazy" decoding="async" /><figcaption>Project interface preview</figcaption></figure>` : "";
     return `<article class="${classes}">${meta}${image}<h3>${escapeHtml(project.name)}</h3><p>${escapeHtml(project.shortDescription)}</p>${tags}${renderProjectActions(project)}</article>`;
   }
 
@@ -39,7 +39,7 @@
 
   function renderGallery(project) {
     if (!project.screenshots.length) return `<div class="empty-visual">SCREENSHOTS WITHHELD<br/>${escapeHtml(project.privacyNote || "No approved screenshots are currently configured.")}</div>`;
-    return `<div class="gallery-grid">${project.screenshots.map(([path, caption], index) => `<button class="gallery-trigger" type="button" data-gallery-index="${index}" aria-label="Open ${escapeHtml(caption)}"><img src="${assetUrl(path)}" alt="${escapeHtml(caption)}" loading="lazy" decoding="async" /><span>${escapeHtml(caption)}</span></button>`).join("")}</div>`;
+    return `<div class="gallery-grid">${project.screenshots.map(([path, caption], index) => `<button class="gallery-trigger m-zoom" type="button" data-gallery-index="${index}" aria-label="Open ${escapeHtml(caption)}"><img src="${assetUrl(path)}" alt="${escapeHtml(caption)}" loading="lazy" decoding="async" /><span>${escapeHtml(caption)}</span></button>`).join("")}</div>`;
   }
 
   function renderVideo(project) {

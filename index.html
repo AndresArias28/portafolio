@@ -20,6 +20,12 @@
     <link rel="canonical" href="/" />
     <link rel="icon" href="data:," />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/motion/motion.css" />
+    <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+    <link rel="modulepreload" href="assets/motion/motion.js" />
+    <link rel="modulepreload" href="assets/moments/moments.js" />
+    <link rel="modulepreload" href="assets/moments/lib.js" />
+    <link rel="modulepreload" href="assets/moments/word-highlight/moment.js" />
     <title>Andrés Santiago Arias — Full Stack Developer</title>
   </head>
   <body>
@@ -51,13 +57,13 @@
     </header>
 
     <main id="main-content">
-      <section class="hero section-shell">
-        <div class="hero-art" aria-hidden="true"></div>
-        <div class="hero-copy reveal">
+      <section class="hero section-shell" data-enter aria-labelledby="hero-h">
+        <div class="hero-art" aria-hidden="true" data-enter-media></div>
+        <div class="hero-copy">
           <p class="eyebrow">
             <span></span> FULL STACK DEVELOPER · PRODUCT DELIVERY
           </p>
-          <h1>
+          <h1 id="hero-h">
             I build software that <em>survives</em> contact with production.
           </h1>
           <p class="lede">
@@ -81,7 +87,7 @@
           </div>
         </div>
         <aside
-          class="hero-console reveal"
+          class="hero-console"
           aria-label="Engineering profile summary"
         >
           <div class="console-top">
@@ -93,8 +99,8 @@
             <p><b>layers</b> = frontend + API + data + operations</p>
             <p><b>approach</b> = evidence over claims</p>
             <div class="console-tags">
-              <span>React</span><span>Java</span><span>Node.js</span
-              ><span>AWS</span>
+              <span><img class="tool-icon" data-icon="react" src="assets/icons/react.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />React</span><span><img class="tool-icon" data-icon="java" src="assets/icons/java.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Java</span><span><img class="tool-icon" data-icon="nodejs" src="assets/icons/nodejs.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Node.js</span
+              ><span><img class="tool-icon" data-icon="aws" src="assets/icons/aws.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />AWS</span>
             </div>
           </div>
         </aside>
@@ -140,8 +146,12 @@
             <p>
               Interfaces and mobile flows connected to real product behaviour.
             </p>
-            <div>
-              React · Angular · Flutter · TypeScript / JavaScript · Bootstrap
+            <div class="tool-row">
+              <span class="tool-pill"><img class="tool-icon" data-icon="react" src="assets/icons/react.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />React</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="angular" src="assets/icons/angular.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Angular</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="flutter" src="assets/icons/flutter.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Flutter</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="typescript" src="assets/icons/typescript.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />TypeScript / JavaScript</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="bootstrap" src="assets/icons/bootstrap.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Bootstrap</span>
             </div>
           </article>
           <article class="capability-card reveal">
@@ -151,8 +161,13 @@
               APIs, authentication and business rules that can be explained in a
               review.
             </p>
-            <div>
-              Java / Spring Boot · Node.js · AdonisJS · Express · REST APIs
+            <div class="tool-row">
+              <span class="tool-pill"><img class="tool-icon" data-icon="java" src="assets/icons/java.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Java</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="si:springboot" src="assets/icons/springboot.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Spring Boot</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="nodejs" src="assets/icons/nodejs.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Node.js</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="adonisjs-icon" src="assets/icons/adonisjs-icon.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />AdonisJS</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="express" src="assets/icons/express.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Express</span>
+              <span class="tool-pill">REST APIs</span>
             </div>
           </article>
           <article class="capability-card reveal">
@@ -162,8 +177,14 @@
               Relational models, validation and testing that make delivery
               safer.
             </p>
-            <div>
-              MySQL · PostgreSQL · JPA · Sequelize · JUnit · Zod · Postman
+            <div class="tool-row">
+              <span class="tool-pill"><img class="tool-icon" data-icon="mysql" src="assets/icons/mysql.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />MySQL</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="postgres" src="assets/icons/postgres.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />PostgreSQL</span>
+              <span class="tool-pill">JPA</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="sequelize" src="assets/icons/sequelize.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Sequelize</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="si:junit5" src="assets/icons/junit5.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />JUnit</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="zod" src="assets/icons/zod.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Zod</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="postman" src="assets/icons/postman.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Postman</span>
             </div>
           </article>
           <article class="capability-card reveal">
@@ -173,8 +194,14 @@
               Enough infrastructure context to understand what happens after
               merge.
             </p>
-            <div>
-              AWS · Linux · Docker · Nginx · Git / GitHub · Configuration
+            <div class="tool-row">
+              <span class="tool-pill"><img class="tool-icon" data-icon="aws" src="assets/icons/aws.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />AWS</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="linux-tux" src="assets/icons/linux-tux.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Linux</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="docker" src="assets/icons/docker.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Docker</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="nginx" src="assets/icons/nginx.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Nginx</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="git" src="assets/icons/git.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />Git</span>
+              <span class="tool-pill"><img class="tool-icon" data-icon="github" src="assets/icons/github.svg" width="13" height="13" loading="lazy" decoding="async" alt="" aria-hidden="true" />GitHub</span>
+              <span class="tool-pill">Configuration</span>
             </div>
           </article>
         </div>
@@ -220,9 +247,9 @@
             <span></span> AVAILABLE FOR PRODUCT-MINDED ENGINEERING ROLES
           </p>
           <h2>Have a real problem to solve?</h2>
-          <p>
-            Let’s talk about the product, the technical constraints and the next
-            useful step.
+          <p data-moment="word-highlight">
+            Let’s talk about the product, the technical constraints and the
+            <strong>next useful step</strong>.
           </p>
           <div class="contact-links">
             <a class="button primary" href="mailto:santo2828@gmail.com"
@@ -244,10 +271,16 @@
         ><span class="brand-mark">AS</span
         ><span>andres<span class="accent">/</span>arias</span></a
       >
+      <p class="icon-credit">
+        Tool marks: SVG Logos (Gil Barbara) &amp; Simple Icons, used under their
+        respective owners' trademarks.
+      </p>
       <a href="#main-content">Back to top ↑</a>
     </footer>
     <script src="site-config.js"></script>
     <script src="projects.js"></script>
     <script src="script.js"></script>
+    <script type="module" src="assets/motion/motion.js"></script>
+    <script type="module" src="assets/moments/moments.js"></script>
   </body>
 </html>

@@ -8,10 +8,12 @@
   --muted: #9aa9c1;
   --faint: #60708b;
   --cyan: #58dcff;
-  --purple: #a58cff;
+  --purple: #ff4fd1;
   --green: #70e9ae;
   --orange: #ffb86b;
   --max: 1180px;
+  --ink: var(--text);
+  --accent: var(--cyan);
 }
 * {
   box-sizing: border-box;
@@ -178,15 +180,15 @@ p {
   margin-top: 0;
 }
 .hero h1 {
-  max-width: 770px;
+  max-width: 790px;
   margin: 18px 0 22px;
-  font-size: clamp(48px, 6vw, 82px);
+  font-size: clamp(48px, 6.4vw, 92px);
   line-height: 0.96;
-  letter-spacing: -0.065em;
+  letter-spacing: -0.07em;
 }
 .hero h1 em,
 .section-heading h2 em {
-  background: linear-gradient(90deg, var(--cyan), var(--purple));
+  background: linear-gradient(115deg, var(--cyan) 15%, var(--purple) 85%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -286,11 +288,25 @@ p {
   border-color: var(--line-strong);
   color: var(--text);
 }
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    transform: translateY(-1px);
+    transition: transform var(--m-in) var(--m-ease);
+  }
+  .button:active {
+    transform: translateY(1px) scale(0.985);
+    transition: transform var(--m-press) var(--m-ease);
+  }
+}
 .hero-console {
+  position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 11px;
-  background: #091321db;
+  background:
+    radial-gradient(circle at 85% -10%, #58dcff26, transparent 65%),
+    radial-gradient(circle at -10% 110%, #ff4fd11c, transparent 60%),
+    #091321db;
   box-shadow: 0 24px 80px #0005;
 }
 .console-top {
@@ -340,6 +356,9 @@ p {
 }
 .console-tags span,
 .tag-list span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   padding: 5px 7px;
   border: 1px solid var(--line);
   border-radius: 4px;
@@ -347,6 +366,29 @@ p {
   background: #ffffff05;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 12px;
+}
+.tool-icon {
+  width: 13px;
+  height: 13px;
+  flex: none;
+  object-fit: contain;
+}
+.tool-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tool-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  background: #ffffff04;
+  color: #c8d5e8;
+  font-size: 11px;
+  line-height: 1.4;
 }
 .proof-strip {
   display: grid;
@@ -371,8 +413,8 @@ p {
 .proof-strip strong {
   color: var(--text);
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 28px;
+  font-weight: 600;
 }
 .proof-strip span {
   color: var(--faint);
@@ -578,7 +620,7 @@ font-year {
   place-content: center;
   gap: 15px;
   background:
-    radial-gradient(circle at center, #a58cff27, transparent 50%), #07111d;
+    radial-gradient(circle at center, #ff4fd127, transparent 50%), #07111d;
 }
 .legal-visual > span {
   color: var(--purple);
@@ -589,7 +631,7 @@ font-year {
 .visual-lines {
   width: 195px;
   height: 48px;
-  border-top: 1px solid #a58cff6b;
+  border-top: 1px solid #ff4fd16b;
   border-bottom: 1px solid #58dcff5c;
   background: repeating-linear-gradient(
     90deg,
@@ -658,6 +700,13 @@ font-year {
   border: 1px solid var(--line);
   border-radius: 9px;
   background: #ffffff03;
+  transition: 0.2s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .capability-card:hover {
+    border-color: var(--line-strong);
+    transform: translateY(-2px);
+  }
 }
 .capability-card > span {
   color: var(--cyan);
@@ -733,6 +782,12 @@ font-year {
   font-size: 13px;
   line-height: 1.7;
 }
+.contact-card > p[data-moment="word-highlight"] {
+  max-width: 560px;
+  margin-bottom: 4px;
+  font-size: 20px;
+  line-height: 1.5;
+}
 .site-footer {
   display: flex;
   align-items: center;
@@ -746,6 +801,16 @@ font-year {
 }
 .site-footer p {
   margin: 0;
+}
+.icon-credit {
+  max-width: 420px;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .icon-credit {
+    max-width: none;
+    text-align: left;
+  }
 }
 .site-footer > a:last-child {
   color: var(--muted);
@@ -1309,7 +1374,13 @@ font-year {
     transition: none;
   }
   .project-card,
-  .button {
+  .button,
+  .capability-card {
     transition: none;
+  }
+  .project-card:hover,
+  .capability-card:hover,
+  .button:is(:hover, :active) {
+    transform: none;
   }
 }
